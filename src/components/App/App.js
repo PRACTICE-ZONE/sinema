@@ -5,7 +5,8 @@ import Home from '../Home/Home'
 const App = () => {
   return (
     <div>
-      
+      <Header/>
+      <Home/>
     </div>
   )
 }
