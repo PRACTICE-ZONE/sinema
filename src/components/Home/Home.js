@@ -26,7 +26,11 @@ export default class Home extends Component {
     .then(response => response.json())
       .then( response => {
         this.setState({
-          movies: [...this.state.movies, ...response.results]
+          movies: [...this.state.movies, ...response.results],
+          heroImage: this.state.heroImage || response.results[0],
+          loading: false,
+          currentPage: response.page,
+          totalPages: response.total_pages
         })
       })
   }
