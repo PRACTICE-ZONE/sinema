@@ -9,7 +9,12 @@ import Spinner from '../elements/Spinner/Spinner';
 import LoadMoreBtn from '../elements/LoadMoreBtn/LoadMoreBtn';
 export default class Home extends Component {
   state = {
-
+    movies: [],
+    heroImage: null,
+    loading: false,
+    currentPage: 0,
+    totalPages: 0,
+    searchTerm: ''
   }
   render() {
     return (
