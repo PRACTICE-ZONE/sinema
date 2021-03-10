@@ -15,3 +15,7 @@ the following
 > Date: 9th March 2021 
 
 > finished all vids of Home page part 1
+
+*********************************************************************************
+> Date: 10th March 2021
+> props and state
