@@ -31,6 +31,7 @@ export default class Home extends Component {
     } else {
       const endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&query${this.state.searchTerm}&page=${this.state.currentPage+1}`;
     }
+    this.fetchItems(endPoint);
   }
 
   fetchItems = (endPoint) => {
