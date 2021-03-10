@@ -16,11 +16,23 @@ export default class Home extends Component {
     totalPages: 0,
     searchTerm: ''
   }
+
   componentDidMount() {
     this.setState({ loading: true })
     const endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
     this.fetchItems(endPoint);
   }
+
+  loadMoreItems = () => {
+    let endPoint = '';
+    this.setState({ loading: true});
+    if(this.state.searchTerm === '') {
+       endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage+1}`;
+    } else {
+      const endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&query${this.state.searchTerm}&page=${this.state.currentPage+1}`;
+    }
+  }
+
   fetchItems = (endPoint) => {
     fetch(endPoint)
     .then(response => response.json())
