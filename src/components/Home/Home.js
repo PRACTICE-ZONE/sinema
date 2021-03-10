@@ -22,7 +22,13 @@ export default class Home extends Component {
     this.fetchItems(endPoint);
   }
   fetchItems = (endPoint) => {
-
+    fetch(endPoint)
+    .then(response => response.json())
+      .then( response => {
+        this.setState({
+          movies: [...this.state.movies, ...response.results]
+        })
+      })
   }
   render() {
     return (
