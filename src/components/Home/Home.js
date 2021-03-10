@@ -16,6 +16,14 @@ export default class Home extends Component {
     totalPages: 0,
     searchTerm: ''
   }
+  componentDidMount() {
+    this.setState({ loading: true })
+    const endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+    this.fetchItems(endPoint);
+  }
+  fetchItems = (endPoint) => {
+
+  }
   render() {
     return (
       <div className="rmdb-home">
