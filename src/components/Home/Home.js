@@ -33,7 +33,7 @@ export default class Home extends Component {
     if(searchTerm === "") {
       endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
     } else {
-      endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&query${this.state.searchTerm}`
+      endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&query${searchTerm}`
     }
   }
 
