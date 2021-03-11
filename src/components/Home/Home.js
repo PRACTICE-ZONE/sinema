@@ -23,6 +23,11 @@ export default class Home extends Component {
     this.fetchItems(endPoint);
   }
 
+  searchItems = (searchTerm) => {
+    let endPoint = ''
+    this.setState({})
+  }
+
   loadMoreItems = () => {
     let endPoint = '';
     this.setState({ loading: true});
