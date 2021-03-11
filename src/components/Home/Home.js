@@ -53,7 +53,7 @@ export default class Home extends Component {
         {this.state.heroImage?
         <div> 
           <HeroImage
-          image = {`${IMAGE_BASE_URL}${BACKDROP_SIZE}/${this.state.HeroImage.backdrop_path}`}
+          image = {`${IMAGE_BASE_URL}${BACKDROP_SIZE}/${this.state.heroImage.backdrop_path}`}
           title = {this.state.heroImage.original_title}
           text = {this.state.heroImage.overview}
           />
