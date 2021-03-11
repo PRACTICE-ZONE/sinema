@@ -71,7 +71,7 @@ export default class Home extends Component {
           title = {this.state.heroImage.original_title}
           text = {this.state.heroImage.overview}
           />
-          <SearchBar/>
+          <SearchBar callback = {this.searchItems}/>
         </div> : null }
         <FourColGrid/>
         <Spinner/>
