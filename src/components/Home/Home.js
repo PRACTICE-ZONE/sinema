@@ -25,7 +25,16 @@ export default class Home extends Component {
 
   searchItems = (searchTerm) => {
     let endPoint = ''
-    this.setState({})
+    this.setState({
+      movies: [],
+      loading: true,
+      searchTerm
+    })
+    if(searchTerm === "") {
+      endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+    } else {
+      endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&query${this.state.searchTerm}`
+    }
   }
 
   loadMoreItems = () => {
@@ -34,7 +43,7 @@ export default class Home extends Component {
     if(this.state.searchTerm === '') {
        endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage+1}`;
     } else {
-      const endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&query${this.state.searchTerm}&page=${this.state.currentPage+1}`;
+       endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&query${this.state.searchTerm}&page=${this.state.currentPage+1}`;
     }
     this.fetchItems(endPoint);
   }
