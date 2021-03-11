@@ -2,9 +2,9 @@ import React from 'react';
 import './MovieThumb.css';
 const MovieThumb = (props) => {
   return (
-    <div>
-      Movie thumb
-    </div>
+    <div className="rmdb-moviethum">
+      <img src={props.image} alt="moviethumb"/>
+     </div>
   )
 }
 
