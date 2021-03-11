@@ -73,6 +73,9 @@ export default class Home extends Component {
           />
           <SearchBar callback = {this.searchItems}/>
         </div> : null }
+        <div className="rmdb-home-grid">
+          <FourColGrid/>
+        </div>
         <FourColGrid/>
         <Spinner/>
         <LoadMoreBtn/>
