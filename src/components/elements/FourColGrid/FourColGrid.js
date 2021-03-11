@@ -4,7 +4,9 @@ import './FourColGrid.css'
 const FourColGrid = props => {
 
   const renderElements = () => {
-
+      const gridElement = props.children.map((element,i) => {
+        
+      })
   }
   return (
     <div className="rmdb-grid">
