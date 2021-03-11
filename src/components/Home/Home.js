@@ -74,7 +74,10 @@ export default class Home extends Component {
           <SearchBar callback = {this.searchItems}/>
         </div> : null }
         <div className="rmdb-home-grid">
-          <FourColGrid/>
+          <FourColGrid>
+            header = { this.state.searchTerm ? "Search Result": "Popular Movies" }
+            loading = { this.state.loading }
+          </FourColGrid>
         </div>
         <FourColGrid/>
         <Spinner/>
