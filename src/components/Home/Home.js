@@ -83,7 +83,8 @@ export default class Home extends Component {
                   <MovieThumb
                   key = {i}
                   clickable = {true }
-                  image = { element.poster_path? `${IMAGE_BASE_URL} ${POSTER_SIZE}${element.poster_patch}`: './images/no_image.jpg' }
+                  image = { element.poster_path ? `${IMAGE_BASE_URL} ${POSTER_SIZE} ${element.poster_path}`: './images/no_image.jpg' }
+                 
                   movieId = {element.id}
                   movieName = { element.original_title }
                   />
