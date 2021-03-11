@@ -19,7 +19,7 @@ export default class SearchBar extends Component {
     return (
       <div className="rmdb-searchbar">
         <div className="rmdb-search-content">
-          <FontAwesome className="rmdb-fa-search"/>
+          <FontAwesome className="rmdb-fa-search" name="search" size="2x"/>
           <input type="text"
            className="rmdb-searchbar-input"
            placeholder="search"
