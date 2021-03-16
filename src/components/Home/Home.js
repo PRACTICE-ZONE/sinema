@@ -89,7 +89,6 @@ export default class Home extends Component {
                   movieId = {element.id}
                   movieName = { element.original_title }
                   />
-                  
                 )
               })}
           </FourColGrid>
