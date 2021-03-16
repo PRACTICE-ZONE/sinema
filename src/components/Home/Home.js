@@ -81,14 +81,13 @@ export default class Home extends Component {
             >
               { this.state.movies.map((element,i) => {
                 return <MovieThumb
-                  key = {i}
-                  clickable = {true }
-                  image = { element.poster_path ? `${IMAGE_BASE_URL} ${POSTER_SIZE} ${element.poster_path}`: './images/no_image.jpg' }
-                
-                  movieId = {element.id}
-                  movieName = { element.original_title }
-                  />
-                
+                          key = {i}
+                          clickable = {true }
+                          image = { element.poster_path ? `${IMAGE_BASE_URL} ${POSTER_SIZE}/ ${element.poster_path}`: './images/no_image.jpg' }
+                        
+                          movieId = {element.id}
+                          movieName = { element.original_title }
+                       />
               })}
           </FourColGrid>
         </div>
