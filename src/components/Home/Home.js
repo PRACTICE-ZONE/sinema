@@ -52,6 +52,7 @@ export default class Home extends Component {
     fetch(endPoint)
     .then(response => response.json())
       .then( response => {
+        console.log(response)
         this.setState({
           movies: [...this.state.movies, ...response.results],
           heroImage: this.state.heroImage || response.results[0],
