@@ -8,10 +8,10 @@
     "react-dom": "^16.8.6",
     "react-fontawesome": "^1.6.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.4.4"
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=process.env.PORT && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
